@@ -21,6 +21,8 @@ Route::middleware('auth:api')->group(function () {
     Route::post('/MultipleLoad', 'Api\PropertyController@MultipleLoad');
 });
 
+
+
 Route::group(['middleware' => ['cors','json.response']], function () {
     Route::post('/login', 'Api\AuthUserController@login')->name('user.login');
     Route::post('/register', 'Api\AuthUserController@register')->name('user.register');
